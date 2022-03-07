@@ -1,0 +1,199 @@
+body {
+  margin: 6.25rem 9.375rem;
+  height: 37.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  padding-bottom: 1.875rem;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 2;
+  padding-bottom: 3.75rem;
+  width: 13.75rem;
+}
+
+img {
+  margin-bottom: 70px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FIRST SECTION */
+
+.first-section {
+  background: hsl(31, 77%, 52%);
+  width: 18.75rem;
+  height: 31.25rem;
+  padding: 3.125rem 3.125rem 3.125rem 5rem;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+}
+
+.first-button {
+  background-color: white;
+  color: hsl(31, 77%, 52%);
+  padding: 0.9375rem 1.875rem;
+  border:  0.125rem solid white;
+  border-radius: 3.125rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+}
+
+.first-button:hover {
+  background-color: hsl(31, 77%, 52%);
+  color:  hsl(0, 0%, 95%);
+}
+
+/* MIDDLE SECTION */
+
+
+.middle-section {
+  background: hsl(184, 100%, 22%);
+  width: 18.75rem;
+  height: 31.25rem;
+  position: relative;
+  left: 430px;
+  bottom: 600px;
+  padding: 3.125rem 3.125rem 3.125rem 5rem;
+}
+
+
+.middle-button {
+  background-color: white;
+  color: hsl(179, 100%, 13%);
+  padding: 0.9375rem 1.875rem;
+  border:  0.125rem solid white;
+  border-radius: 3.125rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+}
+
+.middle-button:hover {
+  background-color: hsl(184, 100%, 22%);
+  color:  hsl(0, 0%, 95%);
+}
+
+/* SECOND SECTION */
+
+
+.second-section {
+  background: hsl(179, 100%, 13%);
+  width: 18.75rem;
+  height: 31.25rem;
+  position: relative;
+  left: 53.75rem;
+  bottom: 75rem;
+  padding: 3.125rem 3.125rem 3.125rem 5rem;
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+}
+
+.second-button {
+  background-color: white;
+  color: hsl(179, 100%, 13%);
+  padding: 0.9375rem 1.875rem;
+  border: 0.125rem solid white;
+  border-radius: 3.125rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+}
+
+.second-button:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+
+  body {
+    margin: 6.25rem 9.375rem;
+    width: 19.0625rem;
+    height: 88.5625rem;
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+
+
+  h1 {
+    margin: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    padding-bottom: 0.2rem;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 2;
+    padding-bottom: 1.75rem;
+    width: 13.75rem;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+
+  /* FIRST SECTION */
+
+  .first-section {
+    background: hsl(31, 77%, 52%);
+    width: 12.75rem;
+    height: 23.25rem;
+    padding: 3.125rem 3.125rem 3.125rem 3.125rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    border-bottom-left-radius: 0;
+  }
+
+  /* MIDDLE SECTION */
+
+
+  .middle-section {
+    background: hsl(184, 100%, 22%);
+    width: 12.75rem;
+    height: 23.25rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 3.125rem 3.125rem 3.125rem 3.125rem;
+  }
+
+  /* SECOND SECTION */
+
+
+  .second-section {
+    background: hsl(179, 100%, 13%);
+    width: 12.75rem;
+    height: 23.25rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 3.125rem 3.125rem 3.125rem 3.125rem;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-right-radius: 0;
+  }
+
+
+}
