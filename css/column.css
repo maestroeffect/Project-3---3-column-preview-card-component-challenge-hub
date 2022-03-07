@@ -1,27 +1,74 @@
-body {
-  margin: 6.25rem 9.375rem;
-  height: 37.5rem;
-  color: hsla(0, 0%, 100%, 0.75);
+/* you need to think more about DRY programming principle while writing code, if dont know about google it. dont you worry everybody learns by doing it thats how i learned and still learning
+
+I tried not to remove things you wrote so you can compare and learn, I used flex-box hope you know about it. */
+
+/*
+use root psuedo-class to declare variable in css and then use them anywhere required like this >> color: var(--bg-color);
+
+:root{
+  --bg-color: hsla(0, 0%, 100%, 0.75);
+  --heading-col: hsl(0, 0%, 95%);
 }
+*/
+
+body {
+  /* margin: 6.25rem 9.375rem; */
+  /* height: 3.5rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 95%);
+  height:100vh;
+
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.card{
+  padding: 3rem;
+  width: 13.75rem;
+}
+
+.btn{
+  background-color: white;
+  padding: 0.75rem 1.5rem;
+  border:  0.125rem solid white;
+  border-radius: 3.125rem;
+  font-family: 'Lexend Deca', sans-serif;
+  /* font-weight: bold; */
+  font-size: 1rem;
+}
+
+
 
 h1 {
   margin: 0;
   font-family: 'Big Shoulders Display', cursive;
   color: hsl(0, 0%, 95%);
-  padding-bottom: 1.875rem;
+  padding-bottom: 1.5rem;
   font-size: 2.5rem;
+
+  /* instead of writing uppercase in HTML use text transform */
+  text-transform: uppercase;
 }
 
 p {
   font-family: 'Lexend Deca', sans-serif;
   color: hsla(0, 0%, 100%, 0.75);
   line-height: 2;
-  padding-bottom: 3.75rem;
-  width: 13.75rem;
+  /* padding-bottom: 2.75rem;
+  instead of padding bottom use margin-bottom to prevent overlapping */
+  margin-bottom: 4rem;
+  /* width: 13.75rem;  since its same width as card-width so adding or removing it wont affect anything*/
 }
 
 img {
-  margin-bottom: 70px;
+  margin-bottom: 2.5rem;
 }
 
 a {
@@ -32,25 +79,26 @@ a {
 
 .first-section {
   background: hsl(31, 77%, 52%);
-  width: 18.75rem;
+  /* width: 18.75rem;
   height: 31.25rem;
-  padding: 3.125rem 3.125rem 3.125rem 5rem;
+  padding: 3.125rem 3.125rem 3.125rem 5rem; */
   border-top-left-radius: 0.625rem;
   border-bottom-left-radius: 0.625rem;
 }
 
 .first-button {
-  background-color: white;
   color: hsl(31, 77%, 52%);
+  /* background-color: white;
   padding: 0.9375rem 1.875rem;
   border:  0.125rem solid white;
   border-radius: 3.125rem;
   font-family: 'Lexend Deca', sans-serif;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 .first-button:hover {
-  background-color: hsl(31, 77%, 52%);
+  /* you can also set the color to be transparent it works the same since it inherits the color of its parent */
+  background-color: transparent;
   color:  hsl(0, 0%, 95%);
 }
 
@@ -59,23 +107,23 @@ a {
 
 .middle-section {
   background: hsl(184, 100%, 22%);
-  width: 18.75rem;
+  /* width: 18.75rem;
   height: 31.25rem;
-  position: relative;
+ position: relative;
   left: 430px;
   bottom: 600px;
-  padding: 3.125rem 3.125rem 3.125rem 5rem;
+  padding: 3.125rem 3.125rem 3.125rem 5rem;  */
 }
 
 
 .middle-button {
-  background-color: white;
   color: hsl(179, 100%, 13%);
+  /* background-color: white;
   padding: 0.9375rem 1.875rem;
   border:  0.125rem solid white;
   border-radius: 3.125rem;
   font-family: 'Lexend Deca', sans-serif;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 .middle-button:hover {
@@ -88,24 +136,24 @@ a {
 
 .second-section {
   background: hsl(179, 100%, 13%);
-  width: 18.75rem;
+  /* width: 18.75rem;
   height: 31.25rem;
   position: relative;
   left: 53.75rem;
   bottom: 75rem;
-  padding: 3.125rem 3.125rem 3.125rem 5rem;
+  padding: 3.125rem 3.125rem 3.125rem 5rem; */
   border-top-right-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
 }
 
 .second-button {
-  background-color: white;
   color: hsl(179, 100%, 13%);
+  /* background-color: white;
   padding: 0.9375rem 1.875rem;
   border: 0.125rem solid white;
   border-radius: 3.125rem;
   font-family: 'Lexend Deca', sans-serif;
-  font-weight: bold;
+  font-weight: bold; */
 }
 
 .second-button:hover {
@@ -122,7 +170,25 @@ a {
 
 @media screen and (max-width: 800px) {
 
-  body {
+  body{
+    height: 100%;
+  }
+
+  .card{
+    border-radius: 0;
+  }
+
+  .container{
+    flex-direction: column;
+    /* you can change the border-radius of the card individually but i like to do it this way. this only works it dont have any paddings applied in it */
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  /*
+  you dont need to declare everything once again, just mention the things you need to change
+
+   body {
     margin: 6.25rem 9.375rem;
     width: 19.0625rem;
     height: 88.5625rem;
@@ -151,7 +217,7 @@ a {
   }
 
 
-  /* FIRST SECTION */
+  FIRST SECTION
 
   .first-section {
     background: hsl(31, 77%, 52%);
@@ -163,7 +229,7 @@ a {
     border-bottom-left-radius: 0;
   }
 
-  /* MIDDLE SECTION */
+  MIDDLE SECTION
 
 
   .middle-section {
@@ -176,7 +242,7 @@ a {
     padding: 3.125rem 3.125rem 3.125rem 3.125rem;
   }
 
-  /* SECOND SECTION */
+  SECOND SECTION
 
 
   .second-section {
@@ -191,6 +257,5 @@ a {
     border-bottom-right-radius: 0.625rem;
     border-top-right-radius: 0;
   }
-
-
+   */
 }
